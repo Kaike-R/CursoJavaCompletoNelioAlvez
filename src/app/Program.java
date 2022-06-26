@@ -49,13 +49,19 @@ public class Program {
         System.out.println("\n=== TEST 5: seller Update ====");
 
 
-        seller = sellerDao.findById(10);
+        seller = sellerDao.findById(11);
 
-        seller.setName("Martha Waine");
+        seller.setName("Justin timberlake");
 
         sellerDao.update(seller);
 
+        System.out.println("Update complete");
+
+        System.out.println("\n=== TEST 6: seller Delete ====");
+
+        sellerDao.deleteById(12);
         
+        System.out.println("Delete Complete");
 
     }
 
