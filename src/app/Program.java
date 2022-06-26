@@ -1,5 +1,4 @@
 package app;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -47,6 +46,16 @@ public class Program {
 
         System.out.println("Inserted! New ID = " + new Seller().getId());
 
+        System.out.println("\n=== TEST 5: seller Update ====");
+
+
+        seller = sellerDao.findById(10);
+
+        seller.setName("Martha Waine");
+
+        sellerDao.update(seller);
+
+        
 
     }
 
