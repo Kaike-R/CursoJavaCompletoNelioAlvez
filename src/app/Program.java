@@ -8,15 +8,12 @@ import model.entities.Seller;
 
 public class Program {
     public static void main(String[] args) throws Exception {
-        
-
-        Department obj = new Department(1, "Books");
-
-        Seller obj2 = new Seller(21, "Bob", "Bob@gmail.com", new Date(), 3000.0, obj);
 
         SellerDao sellerDao = DaoFactory.createSellerDao();
 
-        System.out.println(obj2);
+        Seller seller = sellerDao.findById(3);
+
+        System.out.println(seller);
 
 
     }
